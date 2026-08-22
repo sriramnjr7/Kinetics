@@ -8,7 +8,7 @@
     const cached = sessionStorage.getItem('repo_meta')
     if (cached) d = JSON.parse(cached)
     else {
-      const r = await fetch('https://gitea.com/api/v1/repos/DuarteSantos/openGym')
+      const r = await fetch('https://gitea.com/api/v1/repos/DuarteSantos/Kinetics')
       if (!r.ok) return
       d = await r.json()
       sessionStorage.setItem('repo_meta', JSON.stringify({ stars_count: d.stars_count, forks_count: d.forks_count, open_issues_count: d.open_issues_count }))
@@ -31,7 +31,7 @@
     const cached = sessionStorage.getItem('repo_releases')
     if (cached) rel = JSON.parse(cached)
     else {
-      const r = await fetch('https://gitea.com/api/v1/repos/DuarteSantos/openGym/releases?limit=100')
+      const r = await fetch('https://gitea.com/api/v1/repos/DuarteSantos/Kinetics/releases?limit=100')
       if (!r.ok) return
       rel = (await r.json()).filter(x => !x.draft && !x.prerelease)
         .map(x => ({ tag: x.tag_name, name: x.name, at: x.published_at, body: x.body || '', url: x.html_url }))

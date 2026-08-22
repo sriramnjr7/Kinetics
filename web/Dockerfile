@@ -20,11 +20,11 @@ ARG VCS_REF=dev
 ARG BUILD_DATE=unknown
 
 LABEL maintainer="Duarte Santos https://gitea.com/DuarteSantos" \
-    org.opencontainers.image.title="opengym-web" \
+    org.opencontainers.image.title="kinetics-web" \
     org.opencontainers.image.description="Frontend for Self-hosted gym & body-weight tracker — plan routines, log workouts (supersets & cardio too), track your weight and progress, passkey login. Your data, your server." \
-    org.opencontainers.image.source="https://gitea.com/DuarteSantos/openGym" \
-    org.opencontainers.image.url="https://gitea.com/DuarteSantos/-/packages/container/opengym-web" \
-    org.opencontainers.image.documentation="https://gitea.com/DuarteSantos/openGym#readme" \
+    org.opencontainers.image.source="https://gitea.com/DuarteSantos/Kinetics" \
+    org.opencontainers.image.url="https://gitea.com/DuarteSantos/-/packages/container/kinetics-web" \
+    org.opencontainers.image.documentation="https://gitea.com/DuarteSantos/Kinetics#readme" \
     org.opencontainers.image.licenses="AGPL-3.0-or-later" \
     org.opencontainers.image.version=$VERSION \
     org.opencontainers.image.revision=$VCS_REF \

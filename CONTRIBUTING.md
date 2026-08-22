@@ -1,6 +1,6 @@
-# Contributing to openGym
+# Contributing to Kinetics
 
-Thanks for taking a look! openGym is intentionally small and dependency-light, and the goal is
+Thanks for taking a look! Kinetics is intentionally small and dependency-light, and the goal is
 to keep it that way — easy to read, easy to self-host.
 
 ## Project layout
@@ -55,9 +55,9 @@ cd frontend && npm test
 
 | You have | Goes to |
 | --- | --- |
-| A question, or self-hosting that won't behave | [An issue labelled `question`](https://gitea.com/DuarteSantos/openGym/issues) |
-| An idea you're not sure about yet | [An issue labelled `idea`](https://gitea.com/DuarteSantos/openGym/issues) |
-| A reproducible bug | [Issues](https://gitea.com/DuarteSantos/openGym/issues) |
+| A question, or self-hosting that won't behave | [An issue labelled `question`](https://gitea.com/DuarteSantos/Kinetics/issues) |
+| An idea you're not sure about yet | [An issue labelled `idea`](https://gitea.com/DuarteSantos/Kinetics/issues) |
+| A reproducible bug | [Issues](https://gitea.com/DuarteSantos/Kinetics/issues) |
 | A change you've already built | A pull request |
 
 gitea.com has no Discussions, so questions and ideas are issues too — just labelled, so nobody

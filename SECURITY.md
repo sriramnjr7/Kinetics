@@ -1,6 +1,6 @@
 # Security policy
 
-openGym is a self-hosted app: you run the server, you hold the data. This file says which
+Kinetics is a self-hosted app: you run the server, you hold the data. This file says which
 versions get fixes, how to report something privately, and — the part most people actually
 need — what the app protects you from and what it doesn't.
 
@@ -19,12 +19,12 @@ git pull && docker compose pull && docker compose up -d
 ## Reporting a vulnerability
 
 The project moved to gitea.com, which has no private-advisory feature. So: open an issue on
-<https://gitea.com/DuarteSantos/openGym/issues> saying only *"I need a private channel for a
+<https://gitea.com/DuarteSantos/Kinetics/issues> saying only *"I need a private channel for a
 security report"* — no details, no repro, no version — and you'll get an address to send it to
 within a couple of days.
 
 > The GitHub repo and its private vulnerability reporting are gone with the suspended account;
-> `github.com/DuarteSantos8/openGym/security/advisories/new` no longer resolves.
+> `github.com/sriramnjr7/Kinetics/security/advisories/new` no longer resolves.
 
 Please don't put a working exploit in a public issue if it can be used against other people's
 instances. Everything else (a crash you can only trigger on your own box, a scanner warning)
@@ -49,7 +49,7 @@ in the thread; there's no objection, and no request to sit on it indefinitely.
   change a signed-in user's data.
 - **Shipped deployment config** — `docker-compose.yml`, `web/nginx.conf`, the two Dockerfiles:
   a default that exposes something a self-hoster wouldn't expect to be exposed.
-- **The published images** `gitea.com/duartesantos/opengym-api` and `-web`.
+- **The published images** `gitea.com/sriramnjr7/kinetics-api` and `-web`.
 
 ## Out of scope
 
@@ -72,7 +72,7 @@ in the thread; there's no objection, and no request to sit on it indefinitely.
 
 ## Security model
 
-Read this before hosting openGym for anyone other than yourself.
+Read this before hosting Kinetics for anyone other than yourself.
 
 ### What it does
 
@@ -102,7 +102,7 @@ Read this before hosting openGym for anyone other than yourself.
   subscriptions, invite codes), one `state-<uid>.json` per user with their complete workout
   history and body-weight log, `secret`, and `vapid.json`. Anyone who can read that folder — you,
   whoever holds the backups, whoever gets into the host — can read every user's data, and with
-  `secret` can mint a valid session cookie for any account. **If you host openGym for other
+  `secret` can mint a valid session cookie for any account. **If you host Kinetics for other
   people, they are trusting you exactly as much as they'd trust any server operator.**
 - **Admins can read everything.** A user listed in `ADMIN_UIDS` (or flagged `admin: true` in
   `db.json`) gets every user's full history and body weight, can disable accounts, and can create

@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.png" alt="openGym" width="720">
+<img src="assets/banner.png" alt="Kinetics" width="720">
 
 <br>
 
@@ -19,9 +19,9 @@ No account on someone else's server, no subscription, no ads. Just `docker compo
 ![Docker](https://img.shields.io/badge/Docker-compose-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![No tracking](https://img.shields.io/badge/telemetry-none-f472b6?style=flat-square)
 <br>
-![Last commit](https://img.shields.io/gitea/last-commit/DuarteSantos/openGym?gitea_url=https%3A%2F%2Fgitea.com&style=flat-square)
-[![Stars](https://img.shields.io/gitea/stars/DuarteSantos/openGym?gitea_url=https%3A%2F%2Fgitea.com&style=flat-square)](https://gitea.com/DuarteSantos/openGym/stars)
-[![Issues](https://img.shields.io/gitea/issues/open/DuarteSantos/openGym?gitea_url=https%3A%2F%2Fgitea.com&style=flat-square)](https://gitea.com/DuarteSantos/openGym/issues)
+![Last commit](https://img.shields.io/gitea/last-commit/DuarteSantos/Kinetics?gitea_url=https%3A%2F%2Fgitea.com&style=flat-square)
+[![Stars](https://img.shields.io/gitea/stars/DuarteSantos/Kinetics?gitea_url=https%3A%2F%2Fgitea.com&style=flat-square)](https://gitea.com/DuarteSantos/Kinetics/stars)
+[![Issues](https://img.shields.io/gitea/issues/open/DuarteSantos/Kinetics?gitea_url=https%3A%2F%2Fgitea.com&style=flat-square)](https://gitea.com/DuarteSantos/Kinetics/issues)
 
 </div>
 
@@ -39,7 +39,7 @@ No account on someone else's server, no subscription, no ads. Just `docker compo
 
 <div align="center">
 
-### [🌐 opengym.duarte-santos.ch](https://opengym.duarte-santos.ch) · [📦 Source on gitea.com](https://gitea.com/DuarteSantos/openGym)
+### [🌐 kinetics.kinetics.example.com](https://kinetics.kinetics.example.com) · [📦 Source on gitea.com](https://gitea.com/DuarteSantos/Kinetics)
 
 Screenshots, docs and the APK download live on the site.<br>
 <sub>The browser demo was hosted on GitHub Pages and is offline while that account is
@@ -50,7 +50,7 @@ suspended — self-host it (below) or sideload the Android app to try it for rea
 ## Why
 
 Most workout apps lock your data behind a login on their servers, nag you to upgrade, or
-disappear when the startup does. openGym is the opposite: **it runs on your box, your data
+disappear when the startup does. Kinetics is the opposite: **it runs on your box, your data
 stays in a folder you control, and it's yours to fork.** It still feels modern — installable
 as a home-screen app, passkey sign-in, offline support, sync across your phone and laptop.
 
@@ -85,15 +85,15 @@ as a home-screen app, passkey sign-in, offline support, sync across your phone a
 - 📥 **Bring your history with you** — import from **FitNotes** (Android and iOS), **Strong** and **Hevy**, or body weight straight out of an **Apple Health** export. Exercise names are matched against the library and anything unrecognised becomes one of your own exercises, so nothing in the file is dropped
 - 📦 **Yours to keep** — one-tap JSON export/import, guest mode, **no telemetry**
 - 🤖 **Ask an AI about your training** (optional) — an [MCP server](mcp/README.md) lets a client like Claude Desktop or Cursor read your history in your own words: *"what did I bench last week?"*. Read-only, spawned locally by the client, nothing leaves your box. Not in the Docker build — if you don't use an AI assistant, it isn't there
-- 📱 **Standalone Android app** — the whole tracker as a sideloadable APK: no account, no server, data on the phone, native workout reminders ([download](https://opengym.duarte-santos.ch))
+- 📱 **Standalone Android app** — the whole tracker as a sideloadable APK: no account, no server, data on the phone, native workout reminders ([download](https://kinetics.kinetics.example.com))
 
 ## Quick start (self-host)
 
 You need [Docker](https://docs.docker.com/get-docker/) with Compose.
 
 ```bash
-git clone https://gitea.com/DuarteSantos/openGym
-cd openGym
+git clone https://gitea.com/DuarteSantos/Kinetics
+cd Kinetics
 cp .env.example .env
 docker compose pull   # grab prebuilt images (amd64 + arm64) — skip to build from source instead
 docker compose up -d
@@ -106,7 +106,7 @@ the exercise media (~140 MB) once.
 > [hasaneyldrm/exercises-dataset](https://github.com/hasaneyldrm/exercises-dataset), whose
 > metadata and instruction text are MIT — but whose images and animations are
 > **© [Gym visual](https://gymvisual.com/)**, used under that dataset's terms and *not* under
-> openGym's AGPL. openGym ships none of it: your instance downloads it from upstream. Reusing it
+> Kinetics's AGPL. Kinetics ships none of it: your instance downloads it from upstream. Reusing it
 > yourself, commercially or not, needs your own licence from Gym visual — see
 > [NOTICE.md](NOTICE.md).
  Prefer building the images yourself instead of pulling from
@@ -123,8 +123,8 @@ no backend — everything stays on the phone, with native workout-day reminders 
 backups. Self-hosting gets you multi-device sync and profiles for friends & family; the
 mobile app is the install-and-done flavor.
 
-- **Android:** [**download the APK**](https://opengym.duarte-santos.ch) and sideload it —
-  openGym is deliberately not on the Play Store. Or build it yourself: **[docs/MOBILE.md](docs/MOBILE.md)**.
+- **Android:** [**download the APK**](https://kinetics.kinetics.example.com) and sideload it —
+  Kinetics is deliberately not on the Play Store. Or build it yourself: **[docs/MOBILE.md](docs/MOBILE.md)**.
 - **iPhone:** Apple doesn't allow installing apps outside the App Store, so there is no iOS
   download. Self-host and add it to your home screen from Safari (it's a full PWA), or build
   the native app onto your own device from Xcode — see **[docs/MOBILE.md](docs/MOBILE.md)**.
@@ -167,7 +167,7 @@ All via `.env` (see `.env.example`):
 | `NGINX_PORT`  | Port the web container listens on, inside the container | `80`                 |
 | `BACKEND`     | Name of the API service that `/api` is proxied to — change it if yours isn't called `api` | `api` |
 | `PORT`        | Port the API listens on; the web container proxies to the same value | `3000`  |
-| `RP_NAME`     | Name shown in the passkey prompt                     | `openGym`               |
+| `RP_NAME`     | Name shown in the passkey prompt                     | `Kinetics`               |
 | `SESSION_DAYS`| How long a sign-in lasts, in days                    | `90`                    |
 | `ADMIN_UIDS`  | User ids that get the admin dashboard (comma-separated) | *(none)*             |
 | `INVITE_ONLY` | Require an invite code to create a profile           | *(off)*                 |
@@ -182,7 +182,7 @@ host side of that volume, not the variable.
 
 Rough, community-driven — ideas and PRs welcome:
 
-- [x] Standalone mobile app — Android APK to sideload ([download](https://opengym.duarte-santos.ch)); on iOS as a self-hosted PWA (no store listings planned)
+- [x] Standalone mobile app — Android APK to sideload ([download](https://kinetics.kinetics.example.com)); on iOS as a self-hosted PWA (no store listings planned)
 - [x] Automatic progression programs (linear, Greyskull LP, double progression) with stalls and deloads
 - [x] Estimated 1RM per exercise
 - [ ] Percentage / training-max programming (5/3/1-style) on top of the progression engine
@@ -212,15 +212,15 @@ in the Docker build.
 
 ## Community
 
-- **[Issues](https://gitea.com/DuarteSantos/openGym/issues)** — bugs, questions, self-hosting
+- **[Issues](https://gitea.com/DuarteSantos/Kinetics/issues)** — bugs, questions, self-hosting
   help and ideas. gitea.com has no Discussions, so it all lives in one tracker: label a question
   `question` and an idea `idea`, and it gets treated as one rather than as agreed-on work.
 - **Login trouble?** Most of it is an `RP_ID`/`ORIGIN` mismatch — check
   [docs/SELF_HOSTING.md](docs/SELF_HOSTING.md) before opening an issue.
-- **Pull requests** — [open one on gitea.com](https://gitea.com/DuarteSantos/openGym/pulls); see
+- **Pull requests** — [open one on gitea.com](https://gitea.com/DuarteSantos/Kinetics/pulls); see
   [CONTRIBUTING.md](CONTRIBUTING.md).
 
-> **On the GitHub repo:** `github.com/DuarteSantos8/openGym` is offline because the account was
+> **On the GitHub repo:** `github.com/sriramnjr7/Kinetics` is offline because the account was
 > suspended. gitea.com is the home of the project until that is resolved — same history, same
 > tags, same releases. Old GitHub issue and PR numbers in [CHANGELOG.md](CHANGELOG.md) are kept
 > as plain references; they don't map onto gitea's numbering.
@@ -230,11 +230,11 @@ in the Docker build.
 Issues and PRs welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). Good first issues: more starter
 plans, exercise-data languages, import from other trackers. **A ⭐ helps more people find it.**
 
-openGym is free and stays free: AGPL, no subscription, no paid tier, nothing held back for
+Kinetics is free and stays free: AGPL, no subscription, no paid tier, nothing held back for
 sponsors. If it replaced a paid tracker for you and you want to chip in, the Sponsor button at the
 top of the page is there — a star, a bug report or a PR is worth just as much.
 
-<a href="https://buymeacoffee.com/duartesantos" target="_blank">
+<a href="https://buymeacoffee.com/sriramnjr7" target="_blank">
   <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
        alt="Buy Me A Coffee"
        style="height: 60px !important;width: 217px !important;">
@@ -242,16 +242,16 @@ top of the page is there — a star, a bug report or a PR is worth just as much.
 
 ## License
 
-**openGym's own code** is [GNU AGPL v3.0](LICENSE) — free and open source. You can self-host,
+**Kinetics's own code** is [GNU AGPL v3.0](LICENSE) — free and open source. You can self-host,
 use, modify and share it; if you run a modified version as a network service, you must offer that
-version's source under the same license. Nobody can turn openGym into a closed, proprietary
+version's source under the same license. Nobody can turn Kinetics into a closed, proprietary
 product.
 
-**Third-party content is not, and openGym cannot sublicense it.** The exercise metadata and
+**Third-party content is not, and Kinetics cannot sublicense it.** The exercise metadata and
 instruction text come from
 [hasaneyldrm/exercises-dataset](https://github.com/hasaneyldrm/exercises-dataset) under the
 **MIT** license. The exercise images and animations are **© [Gym visual](https://gymvisual.com/)**
-and are used under that dataset's terms — openGym does not redistribute them (your instance
+and are used under that dataset's terms — Kinetics does not redistribute them (your instance
 fetches them at first run) and does not relicense them under the AGPL. To reuse that media
 yourself, get your own licence from Gym visual
 ([terms](https://gymvisual.com/content/3-terms-and-conditions-of-use)).
